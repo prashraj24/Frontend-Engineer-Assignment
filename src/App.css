@@ -1,38 +1,47 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+    text-align: center;
+    position: center;
+  }
+  
+  .sendEmailButton {
+    color: #ffffff;
+    background-color: #1a79eef8;
+  }
+  
+  
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    position: center;
+    width: 74.4px;  /* Added the width values of title and logo from wireframe */
+    height: 23px;
+    left: 139px;
+    top: 39.87px;
+    padding-top: 39.87px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.8917px;
+    line-height: 23px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    color: #4C5454;
   }
-  to {
-    transform: rotate(360deg);
+
+  .HC1 {
+    position: center;
+    width: 320px;
+    height: 350px;
+    left: 20px;
+    top: 108px;
+    background: #454AA6;
+    border-radius: 12px;
   }
-}
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  
+ 
+  
+  
