@@ -1,6 +1,11 @@
 .App {
+    position: absolute;
     text-align: center;
-    position: center;
+    height: 1743px;
+    width: 360px;
+    align-content: center;
+    left: 20px;
+    right: 20px;
   }
   
   .sendEmailButton {
@@ -14,7 +19,6 @@
     width: 74.4px;  /* Added the width values of title and logo from wireframe */
     height: 23px;
     left: 139px;
-    top: 39.87px;
     padding-top: 39.87px;
     font-family: Roboto;
     font-style: normal;
@@ -25,15 +29,19 @@
     color: #4C5454;
   }
 
-  .HC1 {
-    position: center;
-    width: 320px;
-    height: 350px;
-    left: 20px;
-    top: 108px;
-    background: #454AA6;
-    border-radius: 12px;
+  .greybgd{
+    position: absolute;
+    width: 360px;
+    height: 1743px;
+    left: 0px;
+    right: 0px;
+    top: 84px;
+    align-content: center;
+    background: #F7F6F3;
+    border-radius: 12px 12px 0px 0px;
   }
+
+
   
   @media (prefers-reduced-motion: no-preference) {
     .App-logo {

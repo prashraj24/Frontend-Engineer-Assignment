@@ -1,56 +1,95 @@
-import React, { useState } from 'react';
-import { fetchWeather } from './api/fetchWeather';
+import React, {Component, useState, setState } from 'react';
 import './App.css';
 import fampaylogo from './images/fampaylogo.png';
 import axios from "axios";
-import { Card, Icon, Image, Button } from 'semantic-ui-react';
+import { Card, Icon, Image, Button, CardHeader } from 'semantic-ui-react';
+import {fetchCardData} from './api/fetchCardData.js';
+import { render } from '@testing-library/react';
+import BigDisplayCard from './CardComponents/bigdisplaycard';
+import SpinTheWheelCard from './CardComponents/spinthewheelcard';
+import ImageCard from './CardComponents/imagecard';
+import CenterCard from './CardComponents/centercard';
+import SmallDisplayCards from './CardComponents/smalldisplaycards';
 
-function App() {
+const URL = 'https://run.mocky.io/v3/9fc6c82f-3fde-431d-b1e5-0a1982928cb4';
+
+const loadingTextStyle ={
+  color: 'black',
+  fontSize: '20px',
+}
+
+export default class App extends Component{
+   
+  constructor(){
+    super();
+    this.state = {
+        data : [],
+    }
+}
+
+  getCardData = async (url) => {
+          let response = await axios.get(URL)
+          .then(res=>{
+            var data = res.data;
+            this.setState({ data: data });
+            console.log('AXIOS CALL:  ' + this.state.data[0].cards[0].formatted_title.entities[0].text);
+          })
+          .catch(error => this.setState({ error, isLoading: false }));
+      }
+
+    componentDidMount(){
+        try{
+            this.getCardData(URL);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+
+    shouldComponentUpdate() {
+      console.log('shouldComponentUpdate lifecycle');
   
-  
-    return (
-      <div className="App">
-        
-        <img src={fampaylogo} className="App-logo" alt="fampaylogo" />
+      return true;
+    }
 
-       <br></br>
-       <br></br>
-       <br></br>
+  render(){
 
-       {/* First Card */}  
+     const{data} = this.state.data;
 
-    <Card className="HC1">
-      <Image 
-      height='81.2'
-      width='91'
-      src='https://westeros-staging.s3.amazonaws.com/media/images/generic/2a650f966e1f4a2e81bdbbb118fb2e73.png' 
-       />
-      <Card.Content>
-        <Card.Header>Matthew</Card.Header>
-        <Card.Meta>
-          <span className='date'>Joined in 2015</span>
-        </Card.Meta>
-        <Card.Description>
-          Matthew is a musician living in Nashville.
-        </Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name='user' />
-          22 Friends
-        </a>
-      </Card.Content>
-   </Card>
+      return( this.state.data.length > 0 ? (
 
+        <div className="App">
+          <img src={fampaylogo} className="App-logo" alt="fampaylogo" />
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <Card className="greybgd"></Card>
+
+          {console.log("DATA TO SEND TO OTHER COMPONENT", this.state.data)}
+
+          <BigDisplayCard data={this.state.data}></BigDisplayCard>
+
+          <SpinTheWheelCard data={this.state.data}></SpinTheWheelCard>
+
+          <ImageCard data={this.state.data}></ImageCard>
+
+          <CenterCard data={this.state.data}></CenterCard>
+          
+          {/* 'Not Scrollable' small display card below */}
+          <SmallDisplayCards data={this.state.data}></SmallDisplayCards>
+
+
+        </div>
+
+        ) : (
+
+        <h1 style={loadingTextStyle}> Fetching the goods 😎</h1>
+      
        
-
-
-    
-
-        
-      </div>
+      )
     );
+    
   }
-  
-  export default App;
-  
+    
+}

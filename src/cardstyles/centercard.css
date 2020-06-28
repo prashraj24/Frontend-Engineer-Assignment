@@ -1,0 +1,97 @@
+
+.center-card-container{
+    height: 195px;
+    width: 318px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: linear-gradient(344.71deg, #FBAF03 3.44%, #FFD428 86.36%);;
+    position: absolute;
+    transition: height 0.4s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+    top: 692px;
+}
+
+  .HC4 {
+    margin: absolute;
+    position: center;
+    width: 320px;
+    height: 350px;
+    top: 108px;
+    background: linear-gradient(344.71deg, #FBAF03 3.44%, #FFD428 86.36%);
+    border-radius: 11px;
+  }
+
+.center-card-image{
+    position: absolute;
+    position: center;
+    width: 60.48px;
+    height: 60.48px;
+    left: 132px;
+    top: 15px;
+}
+
+.centercardname{
+    position: absolute;
+    position: center;
+    width: 64px;
+    height: 16px;
+    left: 128px;
+    top: 85px;
+    color: rgba(27, 27, 30, 0.725524);
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.centercardtext{
+    position: absolute;
+    position: center;
+    width: 251px;
+    height: 19px;
+    left: 35px;
+    top: 108px;
+    color: rgba(27, 27, 30, 0.725524);
+
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+}
+
+.center-card-act1-button{
+
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 25px;
+    top: 144px;
+    color: white;
+    text-align: center;
+    background: #000000;
+    border-radius: 6px;
+    border-color: black;
+
+}
+
+.center-card-act2-button{
+
+    position: absolute;
+    width: 135px;
+    height: 36px;
+    left: 168px;
+    top: 144px;
+    color: white;
+    text-align: center;
+    background: #000000;
+    border-radius: 6px;
+    border-color: black;
+    
+}

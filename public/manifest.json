@@ -1,9 +1,9 @@
 {
   "short_name": "PWA Assignment",
-  "name": "Frontend Engineer Assignmet PWA",
+  "name": "Frontend Engineer Assignmet PWA - Prashanth Raj",
   "icons": [
       {
-          "src": "/images/logo.png",
+          "src": "/images/fampaylogo.png",
           "type": "image/png",
           "sizes": "1024x1024"
       }

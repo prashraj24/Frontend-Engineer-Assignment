@@ -1,0 +1,56 @@
+
+.spin-the-wheel-container{
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    top: 473px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    transition: height 0.4s ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+  .HC6 {
+    margin: auto;
+    position: center;
+    width: 320px;
+    height: 60px;
+    top: 108px;
+    background: #FFFFFF;
+    border-radius: 12px;
+  }
+
+  .spintextstyle{
+      position: absolute;
+      width: 92px;
+      height: 16px;
+      left: 65px;
+      top: 21px;
+
+      font-family: Arial;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #000000;
+  }
+
+  .SpinCardArrowIcon{
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    left: 290px;
+    top: 22px;
+  }
+
+.accounticon{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    top: 15px;
+}
