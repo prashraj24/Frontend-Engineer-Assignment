@@ -22,7 +22,7 @@ export default class SmallDisplayCards extends Component{
 
     console.log('DATA ' + this.props.data);
 
-    if(this.props.data)
+    if(this.props.data[5].is_scrollable == "false"){
 
       return (
         <div className="small-display-card-ns-container">
@@ -47,7 +47,35 @@ export default class SmallDisplayCards extends Component{
          
          </div>
   
-      )
+      ) 
+    } else {
+
+      return (
+        <div className="small-display-card-ns-container">
+          
+         {/* First Card */} 
+    
+        <Card className="HC1">
+        
+         <Image className="smalldisplaycard-ns-icon"
+          src={ this.props.data[5].cards[1].icon.image_url }
+         />
+            
+        <Card.Description className="smalldisplaycard-ns-title">
+        { this.props.data[5].cards[1].formatted_title.text }
+        </Card.Description>
+
+        <Card.Description className="smalldisplaycard-ns-name">
+        { this.props.data[5].cards[1].formatted_description.entities[0].text }
+        </Card.Description>
+
+        </Card>
+         
+         </div>
+  
+      ) 
+
+    }
       
     }
         
