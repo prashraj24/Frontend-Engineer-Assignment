@@ -8,6 +8,7 @@ import SpinCardArrowIcon from '../images/SpinCardArrowIcon.png';
 
 export default class SmallDisplayCards extends Component{
 
+//test
 
   constructor(props){
 
