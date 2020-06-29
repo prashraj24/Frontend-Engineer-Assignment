@@ -32,9 +32,8 @@ export default class SmallDisplayCards extends Component{
         <div>
           
          {/* First Card */} 
+      
         
-       
-        <div className="scroll">
          <Card className="small-display-card-s-1-container">
          <Image className="smalldisplaycard-s-icon"
           src={ this.props.data[5].cards[1].icon.image_url }
@@ -59,7 +58,7 @@ export default class SmallDisplayCards extends Component{
         { this.props.data[5].cards[1].formatted_description.entities[0].text }
         </Card.Description>
         </Card>
-        </div>
+        
        
        
        

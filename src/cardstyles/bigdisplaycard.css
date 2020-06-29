@@ -39,6 +39,7 @@
     line-height: 35px;
   }
 
+
   .subTitle{
     
     color: white;
@@ -85,5 +86,84 @@ color: #FFFFFF;
     font-size: 14px;
     line-height: 16px;
     
+}
 
+
+/* remind me later icon css below */
+
+.remindmelatercard{
+  position: absolute;
+  width: 72px;
+  height: 59px;
+  left: 21px;
+  top: 206px;
+  
+  background: white;
+  border-radius: 12px;
+}
+
+.remindmelatercardicon{
+  position: absolute;
+  width: 17.51px;
+  height: 20.24px;
+  left: 28px;
+  top: 10px;
+}
+
+.remindmelatercardtext{
+  position: absolute;
+  width: 54px;
+  height: 12px;
+  left: 10px;
+  top: 37px;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 12px;
+
+  text-align: center;
+
+  color: #000000;
+}
+
+
+/* dismiss now icon css below */
+
+.dismissnowcard{
+  position: absolute;
+  width: 72px;
+  height: 59px;
+  left: 21px;
+  top: 302px;
+  
+  background: white;
+  border-radius: 12px;
+}
+
+.dismissnowcardicon{
+  position: absolute;
+  width: 18.15px;
+  height: 18.15px;
+  left: 28px;
+  top: 10px;
+}
+
+.dismissnowcardtext{
+  position: absolute;
+  width: 54px;
+  height: 12px;
+  left: 10px;
+  top: 37px;
+
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 12px;
+
+  text-align: center;
+
+  color: #000000;
 }
