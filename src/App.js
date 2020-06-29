@@ -28,6 +28,7 @@ export default class App extends Component{
     }
 }
 
+// Fetching the data from API
   getCardData = async (url) => {
           let response = await axios.get(URL)
           .then(res=>{
@@ -58,7 +59,9 @@ export default class App extends Component{
 
      const{data} = this.state.data;
 
-
+ 
+     //data.length > 0 condition because the render method happens before the
+     //getCardData function can fetch all API data. So some nested data is not accessible.
       return( this.state.data.length > 0 ? (
 
         <div className="App" >

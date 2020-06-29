@@ -4,7 +4,7 @@ Prashanth Raj
 ## Steps to Run The App Locally 
 
 1) git clone https://github.com/rmit-s3634184-prashanth-raj/Frontend-Engineer-Assignment.git
-2) Navigate to the folder in command line using =>  cd Frontend-Engineer-Assignment
+2) Navigate to the folder in command line using =>  cd Frontend-Engineer-Assignment-master
 3) Install the App =>  npm install 
 4) Run the App =>  npm start 
 
