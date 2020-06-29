@@ -1,0 +1,171 @@
+
+.small-display-card-ns-1-container{
+  position: absolute;
+  width: 161px;
+  height: 60px;
+  top: 977px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.small-display-card-ns-2-container{
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 977px;
+  background: #FBAF03;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  margin-left: 189px;
+  margin-right: 20px;
+}
+
+
+  .smalldisplaycard-ns-1-title{
+    position: absolute;
+    width: 115px;
+    height: 16px;
+    left: 65px;
+    top: 21px;
+    
+    text-align: start;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #000000;
+}
+
+.smalldisplaycard-ns-2-title{
+  position: absolute;
+  width: 115px;
+  height: 16px;
+  left: 65px;
+  top: 13px;
+  
+  text-align: start;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.smalldisplaycard-ns-2-name{
+  position: absolute;
+  width: 92px;
+  height: 16px;
+  left: 65px;
+  top: 30px;
+
+  text-align: start;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.smalldisplaycard-ns-1-icon{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 12px;
+  top: 15px;
+}
+
+.smalldisplaycard-ns-2-icon{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 12px;
+  top: 15px;
+}
+
+.scroll{
+  display: flexbox;
+  width: 360px;
+  height: fit-content;
+  overflow-x: scroll;
+  overflow-wrap: normal;
+  scroll-behavior: smooth;
+}
+
+
+.small-display-card-s-1-container{
+  position: absolute;
+  width: 232px;
+  height: 60px;
+  top: 902px;
+  background: #FBAF03;
+  border-radius: 12px;
+  transition: height 0.4s ease-in-out;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.small-display-card-s-2-container{
+  position: absolute;
+  width: 232px;
+  height: 60px;
+  top: 902px;
+  background: #FBAF03;
+  border-radius: 12px;
+  transition: height 0.4s ease-in-out;
+  margin-left: 267px;
+  margin-right: 20px;
+}
+
+
+.smalldisplaycard-s-name{
+  position: absolute;
+  width: 92px;
+  height: 16px;
+  left: 65px;
+  top: 30px;
+
+  text-align: start;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}
+
+.smalldisplaycard-s-icon{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 12px;
+  top: 15px;
+}
+
+.smalldisplaycard-s-title{
+  position: absolute;
+  width: 136px;
+  height: 16px;
+  left: 65px;
+  top: 13px;
+  
+  text-align: start;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #000000;
+}

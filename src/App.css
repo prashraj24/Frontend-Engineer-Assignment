@@ -1,24 +1,22 @@
 .App {
     position: absolute;
     text-align: center;
-    height: 1743px;
+    height: 1100px;
     width: 360px;
-    align-content: center;
-    left: 20px;
-    right: 20px;
+    overflow-x: hidden;
   }
   
   .sendEmailButton {
     color: #ffffff;
     background-color: #1a79eef8;
   }
+
   
   
   .App-logo {
     position: center;
     width: 74.4px;  /* Added the width values of title and logo from wireframe */
     height: 23px;
-    left: 139px;
     padding-top: 39.87px;
     font-family: Roboto;
     font-style: normal;
@@ -32,7 +30,7 @@
   .greybgd{
     position: absolute;
     width: 360px;
-    height: 1743px;
+    height: 1100px;
     left: 0px;
     right: 0px;
     top: 84px;

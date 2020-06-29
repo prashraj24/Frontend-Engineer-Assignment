@@ -2,7 +2,7 @@ import React, {Component, useState, setState } from 'react';
 import './App.css';
 import fampaylogo from './images/fampaylogo.png';
 import axios from "axios";
-import { Card, Icon, Image, Button, CardHeader } from 'semantic-ui-react';
+import { Card, Icon, Image, Button, CardHeader, Segment} from 'semantic-ui-react';
 import {fetchCardData} from './api/fetchCardData.js';
 import { render } from '@testing-library/react';
 import BigDisplayCard from './CardComponents/bigdisplaycard';
@@ -79,7 +79,7 @@ export default class App extends Component{
           {/* 'Not Scrollable' small display card below */}
           <SmallDisplayCards data={this.state.data}></SmallDisplayCards>
 
-
+      
         </div>
 
         ) : (

@@ -1,9 +1,9 @@
 {
-  "short_name": "PWA Assignment",
+  "short_name": "fampay app",
   "name": "Frontend Engineer Assignmet PWA - Prashanth Raj",
   "icons": [
       {
-          "src": "/images/fampaylogo.png",
+          "src": "https://www.somacap.com/wp-content/uploads/2019/08/FampayLogo.png",
           "type": "image/png",
           "sizes": "1024x1024"
       }
