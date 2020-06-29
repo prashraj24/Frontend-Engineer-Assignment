@@ -11,7 +11,6 @@ import ImageCard from './CardComponents/imagecard';
 import CenterCard from './CardComponents/centercard';
 import SmallDisplayCards from './CardComponents/smalldisplaycards';
 import ImageCardDetails from './CardComponents/imagecarddetails';
-import {BrowserRouter, Router, Switch, Route} from 'react-router-dom';
 
 const URL = 'https://run.mocky.io/v3/9fc6c82f-3fde-431d-b1e5-0a1982928cb4';
 
@@ -57,8 +56,6 @@ export default class App extends Component{
   
   render(){
 
-    
-
      const{data} = this.state.data;
 
 
@@ -87,7 +84,6 @@ export default class App extends Component{
           
           <ImageCardDetails data={this.state.data}></ImageCardDetails>
       
-        
 
         </div>
 
