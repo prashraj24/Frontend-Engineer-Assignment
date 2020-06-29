@@ -1,5 +1,14 @@
+.SpinCardArrowIcon1{
+  position: absolute;
+  width: 10px;
+  height: 16px;
+  left: 20px;
+  top: 47px;
+  transform: rotate(180deg);
+  visibility: hidden;
+}
 
-.image-card-container{
+.image-card-container2{
     position: absolute;
     width: 320px;
     height: 146.67px;
@@ -17,7 +26,7 @@
   width: 360px;
   height: 501px;
   top: 245px;
-  background: #E5E5E5;
+  background: #F7F6F3;
   border-radius: 12px;
   overflow: hidden;
   transition: height 0.4s ease-in-out;

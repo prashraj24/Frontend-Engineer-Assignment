@@ -2,7 +2,6 @@
 .center-card-container{
     height: 195px;
     width: 318px;
-    display: flex;
     border-radius: 12px;
     overflow: hidden;
     background-color: linear-gradient(344.71deg, #FBAF03 3.44%, #FFD428 86.36%);;

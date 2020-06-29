@@ -6,29 +6,35 @@ import {fetchCardData} from '../api/fetchCardData';
 import { render } from '@testing-library/react';
 import '../cardstyles/bigdisplaycard.css';
 
-var buttonTimer;
+var buttonPressTimer;
 
 export default class BigDisplayCard extends Component{
 
-
   constructor() {
     super()
-    this.show = this.show.bind(this)
-    this.hide = this.hide.bind(this)
+    this.handleButtonPress = this.handleButtonPress.bind(this)
   }
 
   show () {
-    this.buttonTimer= setTimeout(() =>
     document.getElementsByClassName('big-display-container')[0].style.transform = 'translateX(100px)'
-    , 100);
   }
 
-  hide = () => {
+  hide ()  {
   document.getElementsByClassName('big-display-container')[0].style.transform = 'translateX(0px)'
+  
   }
 
-  buttonTimerReset = () => {
-    clearTimeout(buttonTimer);
+  removeCard  () {
+    document.getElementsByClassName('parentdiv')[0].style.height= '0px';
+    localStorage.setItem('parentdiv', false);
+    }
+
+  handleButtonPress () {
+    buttonPressTimer = setTimeout(() => document.getElementsByClassName('big-display-container')[0].style.transform = 'translateX(100px)', 1500);
+  }
+
+  handleButtonRelease () {
+    clearTimeout(buttonPressTimer);
   }
 
 
@@ -37,16 +43,18 @@ export default class BigDisplayCard extends Component{
     console.log('DATA ' + this.props.data);
 
       return (
-        <div>
 
-        <div> 
+        !localStorage.getItem('parentdiv') &&
+
+        <div className="parentdiv">
         
         <Card className="remindmelatercard" 
-          onTouchStart={this.hide} 
-          onTouchEnd={this.buttonTimerReset} 
-          onMouseDown={this.hide} 
-          onMouseUp={this.buttonTimerReset} 
-          onMouseLeave={this.buttonTimerReset}>
+          onTouchStart={this.handleButtonRelease} 
+          onTouchEnd={this.handleButtonRelease} 
+          onMouseDown={this.handleButtonRelease} 
+          onMouseUp={this.handleButtonRelease} 
+          onMouseLeave={this.handleButtonRelease}
+          onClick={this.removeCard}>
             <Image className="remindmelatercardicon"  
               src={bellicon} />
          <Card.Content>
@@ -57,11 +65,12 @@ export default class BigDisplayCard extends Component{
         </Card>
 
         <Card className="dismissnowcard" 
-          onTouchStart={this.hide} 
-          onTouchEnd={this.buttonTimerReset} 
-          onMouseDown={this.hide} 
-          onMouseUp={this.buttonTimerReset} 
-          onMouseLeave={this.buttonTimerReset}>
+          onTouchStart={this.handleButtonRelease} 
+          onTouchEnd={this.handleButtonRelease} 
+          onMouseDown={this.handleButtonRelease} 
+          onMouseUp={this.handleButtonRelease} 
+          onMouseLeave={this.handleButtonRelease}
+          onClick={this.removeCard}>
             <Image className="dismissnowcardicon"  
               src={dismissicon} />
          <Card.Content>
@@ -71,32 +80,45 @@ export default class BigDisplayCard extends Component{
          </Card.Content>
         </Card>
 
-        </div>
 
-        <div 
-          onTouchStart={this.show} 
-          onTouchEnd={this.buttonTimerReset} 
-          onMouseDown={this.show} 
-          onMouseUp={this.buttonTimerReset} 
-          onMouseLeave={this.buttonTimerReset}
-         >
-          
-         {/* First Card */} 
+    
+    {/* Added on click/press events to the big display card to each element excluding the action button.
+        so that user can click the action button without the card moving to the right. Otherwise user will
+        be able to click action button only after the card has moved to the right. */}
 
-      <div className="big-display-container" >
+     <div >
+
+      <div className="big-display-container"  >
 
         <Card className="HC3">
         
-         <Image className="HC3"
+        <Image className="HC3"  
+          onTouchStart={this.show} 
+          onTouchEnd={this.handleButtonRelease} 
+          onMouseDown={this.show} 
+          onMouseUp={this.handleButtonRelease} 
+          onMouseLeave={this.handleButtonRelease}
           src={this.props.data[0].cards[0].bg_image.image_url}
         />
             
        <Card.Content>
-       <Card.Header className="title"> { this.props.data[0].cards[0].formatted_title.entities[0].text} <br></br>
+       <Card.Header 
+        onTouchStart={this.show} 
+        onTouchEnd={this.handleButtonRelease} 
+        onMouseDown={this.show} 
+        onMouseUp={this.handleButtonRelease} 
+        onMouseLeave={this.handleButtonRelease}
+       className="title"> { this.props.data[0].cards[0].formatted_title.entities[0].text} <br></br>
        <span className="subTitle">{ this.props.data[0].cards[0].formatted_title.entities[1].text }</span>
        </Card.Header> 
                
-      <Card.Description className="sampleText">
+      <Card.Description 
+       onTouchStart={this.show} 
+       onTouchEnd={this.handleButtonRelease} 
+       onMouseDown={this.show} 
+       onMouseUp={this.handleButtonRelease} 
+       onMouseLeave={this.handleButtonRelease}
+      className="sampleText">
       { this.props.data[0].cards[0].description}
       </Card.Description>
       

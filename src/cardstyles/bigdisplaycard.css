@@ -1,4 +1,18 @@
 
+.parentdiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    transition: height 0.4s ease-in-out;
+    margin-left: 0px;
+    margin-right: 0px;
+    top: 0px;
+}
+
 .big-display-container{
     height: 350px;
     width: 320px;
@@ -10,7 +24,7 @@
     transition: height 0.4s ease-in-out;
     margin-left: 20px;
     margin-right: 20px;
-    top: 108px;
+    top: 0px;
 }
 
   .HC3 {
@@ -96,7 +110,7 @@ color: #FFFFFF;
   width: 72px;
   height: 59px;
   left: 21px;
-  top: 206px;
+  top: 98px;
   
   background: white;
   border-radius: 12px;
@@ -136,7 +150,7 @@ color: #FFFFFF;
   width: 72px;
   height: 59px;
   left: 21px;
-  top: 302px;
+  top: 194px;
   
   background: white;
   border-radius: 12px;
